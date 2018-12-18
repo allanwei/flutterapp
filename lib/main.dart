@@ -189,22 +189,23 @@ class _MyHomePageState extends State<MyHomePage> {
   //  );
   return  MaterialApp(
       theme: new ThemeData(
-        primarySwatch: Colors.lime,
-        buttonColor: Colors.lime,
+        primarySwatch: Colors.indigo,
+        buttonColor: Colors.indigoAccent,
       ),
       home: new DefaultTabController(
         length: 3,
         child: new Scaffold(
           appBar: new AppBar(
+            
             bottom: new TabBar(
-              indicatorColor: Colors.black54,
+              indicatorColor: Colors.black87,
               tabs: [
                 new Tab(text: 'Barcode'),
                 new Tab(text: 'OCR'),
                 new Tab(text: 'Face')
               ],
             ),
-            title: new Text('Flutter Mobile Vision'),
+            title: new Text('$_connectionStatus'),
           ),
           body: new TabBarView(children: [
             _getBarcodeScreen(context),
